@@ -108,7 +108,7 @@ class Counter:
         # sets the counter
         self.num = num
 
-class PRGROM:
+class ROM:
     def __init__(self,addr,data,file):
         self.addr = addr
         self.data = data
@@ -116,4 +116,16 @@ class PRGROM:
     
     def read(self,addr):
         self.data = self.file[addr]
+    
+class RAM:
+    def __init__(self,addr,data,file):
+        self.addr = addr
+        self.data = data
+        self.file = file
+    
+    def read(self,addr):
+        self.data = self.file[addr]
+    
+    def write(self,addr,data):
+        self.file[addr] = data
     
