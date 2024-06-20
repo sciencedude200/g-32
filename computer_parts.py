@@ -5,7 +5,7 @@ class ALU:
         self.b = int(b)
         self.s = int(s)
         self.func = int(func)
-        self.über = 0 #haha tf2 funny
+        self.über = 0 # über is over in german.
         # func 0 = nothing
         # func 1 = add a and b
         # func 2 = sub a and b
