@@ -1,3 +1,5 @@
+import numpy as np
+
 class ALU:
     # does not just do arithmatic. f good naming
     def __init__(self,a,b,s,func):
@@ -109,23 +111,19 @@ class Counter:
         self.num = num
 
 class ROM:
-    def __init__(self,addr,data,file):
-        self.addr = addr
-        self.data = data
-        self.file = file
+    def __init__(self, file):
+        self.data = file
     
-    def read(self,addr):
-        self.data = self.file[addr]
+    def read(self, addr):
+        return self.data[addr]
     
 class RAM:
-    def __init__(self,addr,data,file):
-        self.addr = addr
-        self.data = data
-        self.file = file
+    def __init__(self, size):
+        self.data = np.zeros(size, dtype = int)
     
-    def read(self,addr):
-        self.data = self.file[addr]
+    def read(self, addr):
+        return self.data[addr]
     
-    def write(self,addr,data):
-        self.file[addr] = data
+    def write(self, addr, data):
+        self.data[addr] = data
     
