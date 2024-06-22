@@ -34,3 +34,7 @@ test_address=2
 print("ROM test")
 print("Read only value should be 1234" )
 print("Read data is "+str(rom.read(test_address)))
+
+# tests ALU
+print("ALU test")
+alu.test()
